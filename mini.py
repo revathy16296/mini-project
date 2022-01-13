@@ -57,6 +57,8 @@ df_2007_updated.head()#changes the format of date and time in df_2007_updated
 groupdates=df_2007_updated.groupby("Date")
 print(groupdates)
 
+#fourier transform
+
 func = lambda x: fft(x['Global_active_power'].values)
 fft_transformed_data=np.abs(groupdates.apply(func))
 #print(fft_transformed_data.values)
